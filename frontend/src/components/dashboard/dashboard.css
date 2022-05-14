@@ -1,0 +1,141 @@
+.dashboard{
+    padding: 40px;
+    background-color: rgba(240, 248, 255, 0.316);
+    min-height: calc(100vh - 165px);
+}
+.new-todo{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.new-todo select{
+    height: 40px;
+    width: 150px;
+    border: solid 2px rgb(139, 78, 251);
+    color: rgb(139, 78, 251);
+    font-size: larger;
+    font-weight: 500;
+}
+.new-todo select:focus{
+    border: solid 2px rgb(139, 78, 251);
+}
+.new-todo-btn{
+    height: 40px;
+    width: 150px;
+    font-size: larger;
+    font-weight: 600;
+    border-radius: 10px;
+    border: solid rgb(139, 78, 251) 2px;
+    background-color: rgb(139, 78, 251);
+    color: white;
+    cursor: pointer;
+}
+.new-todo-form{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(5px);
+    transform: scale(0);
+    transition: all 0.1s;
+    z-index: 10;
+}
+.new-todo-form form{
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    height: 400px;
+    width: 300px;
+    padding: 20px;
+    border-radius: 10px;
+}
+.new-todo-form form input{
+    height: 35px;
+    border-radius: 5px;
+    border: solid black 1px;
+    padding: 0px 5px;
+    font-size: large;
+}
+.new-todo-form form label{
+    margin-top: 20px;
+    margin-bottom: 5px;
+    font-size: large;
+    font-weight: 600;
+}
+.new-todo-form form input[type="button"]{
+    border: solid 2px rgb(139, 78, 251);
+    color: rgb(139, 78, 251);
+    background: none;
+    font-size: larger;
+    font-weight: bolder;
+    cursor: pointer;
+}
+.new-todo-form form input[type="submit"]{
+    margin: 40px 0px 20px 0px;
+    border: solid 2px rgb(139, 78, 251);
+    background-color: rgb(139, 78, 251);
+    color: white;
+    font-size: larger;
+    font-weight: bolder;
+    cursor: pointer;
+}
+
+.todo-list{
+    display: flex;
+    flex-wrap: wrap;
+}
+.todo-card{
+    height: 220px;
+    width: 220px;
+    border: solid 1px silver;
+    margin: 30px;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    transition: all 0.2s;
+    background-color: white;
+}
+.todo-card:hover{
+    box-shadow: rgba(192, 192, 192, 0.461) 3px 3px 10px 10px;
+}
+.todo-card-title{
+    height: 50px;
+    font-size: x-large;
+    font-weight: 600;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.todo-card-desc{
+    height: 120px;
+    padding: 5px;
+}
+.todo-card-date{
+    height: 30px;
+    font-size: small;
+    padding: 0px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.todo-card-status{
+    position: absolute;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+}
+.todo-card-btn{
+    margin: 0px 2px;
+    background: none;
+    border: solid rgb(139, 78, 251) 1px;
+    color: rgb(139, 78, 251);
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: small;
+}

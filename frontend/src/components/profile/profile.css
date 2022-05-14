@@ -1,0 +1,34 @@
+.profile{
+    width: 100vw;
+    padding: 20px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.profile-box{
+    height: 70vh;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    grid-row-gap: 20px;
+    grid-column-gap: 20px;
+    padding: 30px;
+    border: solid silver 1px;
+    font-size: larger;
+    position: relative;
+}
+.user-name-input, .user-email-input, .current-password-input, .new-password-input{
+    height: 35px;
+    border: solid black 1px;
+    border-radius: 5px;
+    font-size: large;
+    padding: 0px 5px;
+}
+.change-password-btn{
+    background-color: rgb(139, 78, 251);
+    border: solid 3px rgb(139, 78, 251);
+    color: white;
+    font-size: large;
+    border-radius: 5px;
+    height: 35px;
+}

@@ -1,0 +1,30 @@
+.loader{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 20;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+.spinner{
+    height: 60px;
+    width: 60px;
+    border: solid rgb(139, 78, 251) 10px;
+    border-radius: 50%;
+    border-right: solid 10px rgb(139, 78, 251, 0.2);
+    animation: spin 1s infinite linear ;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}

@@ -1,0 +1,60 @@
+.auth-page{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.auth-box{
+    height: 450px;
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 10px;
+    box-shadow: rgb(246, 244, 244) 3px 3px 10px 10px;
+}
+.auth-head{
+    height: 80px;
+    font-size: xx-large;
+    font-weight: 700;
+    text-align: center;
+    line-height: 80px;
+}
+.auth-body form{
+    height: 340px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 30px;
+}
+.auth-body form input{
+    height: 40px;
+    width: 90%;
+    border-radius: 5px;
+    border: solid black 1px
+}
+.auth-body form a{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+}
+.auth-body form input[type = "submit"]{
+    background-color: rgb(139, 78, 251);
+    color: white;
+    font-size: larger;
+    font-weight: 400;
+    border: solid 2px rgb(139, 78, 251);
+    position: relative;
+    top: 20px;
+}
+.auth-body form input[type = "button"]{
+    background-color: white;
+    color: rgb(139, 78, 251);
+    
+    font-weight: 400;
+    border: solid 2px rgb(139, 78, 251);
+}
+
