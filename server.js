@@ -199,6 +199,15 @@ app.post("/list/update", async (req, res) => {
   res.send({ message: "updated successfully" });
 });
 
+__dirname = path.resolve();
+if (process.env.NODE_ENV === "production") {
+  app.use(express.static("frontend/build"));
+
+  app.get("*", (req, res) => {
+    res.sendFile(path.resolve(__dirname, "frontend", "build", "index.html"));
+  });
+}
+
 app.listen(process.env.PORT, function () {
   console.log("Express is running on port: " + process.env.PORT);
 });

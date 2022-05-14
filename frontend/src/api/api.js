@@ -1,8 +1,7 @@
 import axios from "axios";
-const baseURL = "http://localhost:7000";
 
 export const signup = async (name, email, password) => {
-  const res = await axios.post(`${baseURL}/signup`, {
+  const res = await axios.post(`/signup`, {
     name: name,
     email: email,
     password: password,
@@ -12,7 +11,7 @@ export const signup = async (name, email, password) => {
 
 export const login = async (email, password) => {
   console.log(email);
-  const res = await axios.post(`${baseURL}/login`, {
+  const res = await axios.post(`/login`, {
     email: email,
     password: password,
   });
@@ -20,12 +19,12 @@ export const login = async (email, password) => {
 };
 
 export const getInfo = async (email) => {
-  const res = await axios.post(`${baseURL}/userInfo/get`, { email: email });
+  const res = await axios.post(`/userInfo/get`, { email: email });
   return res;
 };
 
 export const updatePassword = async (email, cpassword, npassword) => {
-  const res = await axios.post(`${baseURL}/userPassword/update`, {
+  const res = await axios.post(`/userPassword/update`, {
     email: email,
     cpassword: cpassword,
     npassword: npassword,
@@ -34,7 +33,7 @@ export const updatePassword = async (email, cpassword, npassword) => {
 };
 
 export const updateUserName = async (email, name) => {
-  const res = await axios.post(`${baseURL}/userName/update`, {
+  const res = await axios.post(`/userName/update`, {
     email: email,
     name: name,
   });
@@ -42,12 +41,12 @@ export const updateUserName = async (email, name) => {
 };
 
 export const deleteAccount = async (id,email) => {
-    const res = await axios.post(`${baseURL}/deleteAccount`,{id: id, email: email});
+    const res = await axios.post(`/deleteAccount`,{id: id, email: email});
     return res;
 }
 
 export const addListItem = async (email, item) => {
-  const res = await axios.post(`${baseURL}/listItem/add`,{
+  const res = await axios.post(`/listItem/add`,{
     email: email,
     listItem: item
   });
@@ -55,21 +54,21 @@ export const addListItem = async (email, item) => {
 }
 
 export const getList = async (email) => {
-  const res = await axios.post(`${baseURL}/list/get`,{email:email});
+  const res = await axios.post(`/list/get`,{email:email});
   return res;
 }
 
 export const deleteItem = async (email, id) => {
-  const res = await axios.post(`${baseURL}/list/delete`,{email: email, id: id});
+  const res = await axios.post(`/list/delete`,{email: email, id: id});
   return res;
 }
 
 export const updateStatus = async (email, id) => {
-  const res = await axios.post(`${baseURL}/list/status/update`, {email: email,id:id});
+  const res = await axios.post(`/list/status/update`, {email: email,id:id});
   return res;
 }
 
 export const updateListItem = async (email, id, title, desc, date, completed) => {
-  const res = await axios.post(`${baseURL}/list/update`, {email: email,id:id, title: title, desc: desc, date: date, completed: completed});
+  const res = await axios.post(`/list/update`, {email: email,id:id, title: title, desc: desc, date: date, completed: completed});
   return res;
 }
