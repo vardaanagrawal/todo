@@ -4,6 +4,7 @@ import { getInfo, updatePassword } from "../../api/api";
 import jwtDecode from "jwt-decode";
 import { updateUserName, deleteAccount } from "../../api/api";
 import { useNavigate } from "react-router-dom";
+import Loader from '../loader/Loader';
 
 export default function Profile() {
 
@@ -27,17 +28,22 @@ export default function Profile() {
   }, []);
 
   async function getdata() {
+    setLoading(true);
     const res = await getInfo(tokenEmail);
     setName(res.data.name);
     setEmail(res.data.email);
     setName2(res.data.name);
     setEmail2(res.data.email);
     setId(res.data._id);
+    setLoading(false);
   }
   const handleUpdatePassword = async () => {
     if (curPassword && newPassword) {
       const res = await updatePassword(email, curPassword, newPassword);
       alert(res.data.message);
+      setChangingPassword(false);
+      setCurPassword("");
+      setNewPassword("");
     }
   };
 
@@ -63,8 +69,11 @@ export default function Profile() {
     }
   };
 
+  const [loading,setLoading] = useState(true);
+
   return (
     <div className="profile">
+      {loading && <Loader/>}
       <div className="profile-box">
         <div style={{display: "flex",justifyContent: "space-between"}}>
         <div className="user-name-label">Name:</div>

@@ -4,6 +4,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    background-color: rgba(240, 248, 255, 0.316);
 }
 .profile-box{
     height: 70vh;
@@ -16,6 +17,7 @@
     border: solid silver 1px;
     font-size: larger;
     position: relative;
+    background-color: white;
 }
 .user-name-input, .user-email-input, .current-password-input, .new-password-input{
     height: 35px;
